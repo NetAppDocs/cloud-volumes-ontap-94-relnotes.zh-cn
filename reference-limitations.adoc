@@ -1,0 +1,139 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features 
+summary: 已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。 
+---
+= 已知限制
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。
+
+
+
+== 一般限制
+
+以下限制适用于 AWS 和 Azure 中的 Cloud Volumes ONTAP 。
+
+
+
+=== 最大并发复制操作数
+
+无论实例类型或计算机类型如何， Cloud Volumes ONTAP 的并发 SnapMirror 或 SnapVault 传输的最大数量均为每个节点 100 。
+
+
+
+=== 软件更新必须由 Cloud Manager 完成
+
+Cloud Volumes ONTAP 升级必须从 Cloud Manager 完成。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
+
+
+
+=== 启动磁盘和根磁盘不支持加密
+
+如果您启用了云提供商提供的一个选项，用于自动加密所有新卷或磁盘，则必须在部署 Cloud Volumes ONTAP 时临时禁用此选项。否则， Cloud Volumes ONTAP 部署将失败。Cloud Volumes ONTAP 系统的启动磁盘和根磁盘不支持加密。
+
+
+
+=== 不得从云提供商的控制台修改 Cloud Volumes ONTAP 部署
+
+通过云提供商的控制台更改 Cloud Volumes ONTAP 配置会导致配置不受支持。对 Cloud Manager 创建和管理的 Cloud Volumes ONTAP 资源进行的任何更改都会影响系统稳定性以及 Cloud Manager 管理系统的能力。
+
+
+
+=== 磁盘和聚合必须通过 Cloud Manager 进行管理
+
+必须直接从 Cloud Manager 创建和删除所有磁盘和聚合。不应从其他管理工具执行这些操作。这样做可能会影响系统稳定性、妨碍将来添加磁盘的能力、并可能产生冗余云提供商费用。
+
+
+
+=== SnapManager 许可限制
+
+Cloud Volumes ONTAP 支持 SnapManager 每服务器许可证。不支持每存储系统（ SnapManager 套件）许可证。
+
+
+
+=== 不支持的 ONTAP 功能
+
+Cloud Volumes ONTAP 不支持以下功能：
+
+* 聚合级实时重复数据删除
+* 聚合级后台重复数据删除
+* 磁盘维护中心
+* 磁盘清理
+* 光纤通道（ FC ）
+* Flash Pool
+* FlexCache
+* 无限卷
+* 接口组
+* 索引节点 LIF 故障转移
+* MetroCluster
+* 多租户（仅支持一个提供数据的 SVM ）
+* NetApp 卷加密
+* RAID4 ， RAID-DP ， RAID-TEC （支持 RAID0 ）
+* 服务处理器
+* SnapLock 合规性和企业模式（仅支持 Cloud WORM ）
+* SnapMirror 同步
+* VLAN
+
+
+
+
+== AWS 中的已知限制
+
+以下已知限制会影响 AWS 中的 Cloud Volumes ONTAP 。
+
+
+
+=== Amazon CloudWatch 报告错误警报
+
+Cloud Volumes ONTAP 不会在空闲时释放 CPU ，因此 Amazon CloudWatch 可以为 EC2 实例报告高 CPU 警告，因为它会看到 100% 的使用率。您可以忽略此警报。ONTAP statistics 命令可显示 CPU 的实际使用情况。
+
+
+
+=== Cloud Volumes ONTAP HA 对不支持即时存储交还
+
+节点重新启动后，配对节点必须先同步数据，然后才能返回存储。重新同步数据所需的时间取决于节点关闭时客户端写入的数据量以及交还期间的数据写入速度。
+
+
+
+=== AWS Govloud （美国）地区的限制
+
+* 如果要在任何 AWS GovCloud （ US ）区域启动 Cloud Volumes ONTAP 实例，则必须在 AWS GovCloud （ US ）区域部署 Cloud Manager 。
+* 当部署在 AWS 政府云（美国）区域时、 Cloud Manager 无法在适用于 Microsoft Azure 配置的 NetApp 私有存储或适用于 SoftLayer 配置的 NetApp 私有存储中发现 ONTAP 集群。
+
+
+
+
+=== 不支持断开和重新连接 EBS 卷
+
+不支持将 EBS 卷从 Cloud Volumes ONTAP 实例断开，然后将其重新连接到另一个 Cloud Volumes ONTAP 实例。您应使用 Cloud Manager 在实例之间复制数据。
+
+
+
+=== 加密限制
+
+* 启用了 Cloud Volumes ONTAP 加密的系统不支持 LUN 移动。
+* 即使对于无法创建的聚合， Cloud Volumes ONTAP 也会向密钥管理器发送加密密钥。
++
+您必须手动从密钥管理器中删除密钥。
+
+
+
+
+
+== Microsoft Azure 中的已知限制
+
+以下已知限制会影响 Azure 中的 Cloud Volumes ONTAP 。
+
+
+
+=== 按需购买不适用于 CSP 合作伙伴
+
+如果您是 Microsoft Cloud 解决方案 Provider （ CSP ）合作伙伴，则无法部署 Cloud Volumes ONTAP Explore ，标准版或高级版，因为 CSP 合作伙伴不支持按需购买订阅。您必须购买许可证并部署 Cloud Volumes ONTAP BYOL 。

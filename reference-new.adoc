@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: reference-new.html 
+keywords: 'what"s new, new, features, release notes, enhancements' 
+summary: 新版本的 Cloud Volumes ONTAP 引入了新功能，增强功能和错误修复。 
+---
+= Cloud Volumes ONTAP 9.4 中的新增功能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP 9.4 包括多项新功能和增强功能。
+
+
+NOTE: 最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager 发行说明"] 了解详细信息。
+
+
+
+== 在 AWS Govloud （美国）地区支持按需购买
+
+现在， AWS 政府云（美国）区域支持 Cloud Volumes ONTAP 的按需购买版本。这是除了支持位于美国政府云地区的 Cloud Volumes ONTAP BYOL 之外的其他功能。
+
+您可以像在任何其他地区一样在美国政府云（美国）地区部署 Cloud Volumes ONTAP 。访问 NetApp Cloud Central 并在美国政府云中启动 Cloud Manager 。然后在 Cloud Manager 中创建新的工作环境、启动 Cloud Volumes ONTAP PayGo 或 BYOL 。
+
+
+
+== 使用 Cloud Volumes ONTAP 高级版和 BYOL 分层冷数据
+
+9.2 版在性能层（ SSD 或 HDD ）和容量层（对象存储）之间引入了自动数据分层。发送到容量层的冷数据包括读写卷的 Snapshot 副本（ _Snapshot only_ 分层策略）或目标卷的数据（ _backup_ 分层策略）。
+
+对于 Cloud Volumes ONTAP 9.4 高级版和 BYOL ，您现在有第三个选择：您可以使用 _auto_tiering 策略将读写卷中的冷数据块分层到容量层。冷数据不仅包括 Snapshot 副本、还包括来自活动文件系统的冷用户数据。
+
+如果通过随机读取进行读取、则容量层中的冷数据块会变得很热并移动到性能层。如果按顺序读取（例如与索引和防病毒扫描关联的读取）进行读取、冷数据块将保持冷态并且不会移动到性能层。
+
+在 Cloud Manager 中创建或编辑卷时，您可以选择分层策略。有关详细信息，请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Cloud Manager 文档"]。
+
+
+
+== Microsoft Azure 中的数据分层
+
+现在，您可以通过将热数据的性能层（高级或标准受管磁盘）与冷数据的容量层（ Azure Blob 存储）相结合来降低 Azure 存储成本。Azure 也支持 AWS 中支持的相同分层策略：自动，仅 Snapshot 和备份。
+
+
+NOTE: DS3_v2 虚拟机类型不支持数据分层。
+
+在 Cloud Manager 中创建或编辑卷时，您可以选择分层策略。有关详细信息，请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Cloud Manager 文档"]。
+
+
+
+== 使用配置的 IOPS SSD 进行数据分层
+
+现在，配置了 IOPS SSD 的 AWS 支持数据分层。您可以使用这些 SSD 作为热数据的性能层，而 Amazon S3 作为冷数据的容量层。
+
+
+
+== 提高数据分层时的性能
+
+现在，将冷数据分层到对象存储容量层的卷支持 9.2 和 9.3 版中引入的增强写入性能。此适用场景卷在 Cloud Volumes ONTAP 9.4 中的新 SSD 聚合上创建。
+
+
+
+== 提高 AWS 中多个工作负载的性能
+
+现在， Cloud Volumes ONTAP 在 AWS 中提供了额外的网络带宽，从而提高了具有多个工作负载的系统的性能。在升级到 9.4 以及启动新的 9.4 系统时，可以为以下 EC2 实例类型提供额外的带宽：
+
+* m4.xlarge
+* m4.2 倍大
+* m4.4xlarge
+* c4.4xlarge
+* c4.8xlarge
+
+
+
+
+== 不再支持 EC2 实例类型
+
+所有版本的 Cloud Volumes ONTAP 不再支持多种 EC2 实例类型。运行这些实例类型的现有系统将继续正常运行；但是， NetApp 强烈建议更改为其他实例类型。
+
+要查看实例类型与 NetApp 许可证之间的定价差异，请转到 AWS Marketplace http://aws.amazon.com/marketplace/pp/B011KEZ734["单节点系统"^] 和 http://aws.amazon.com/marketplace/pp/B01H4LVJ84["HA 对"^]。
+
+[cols="2*"]
+|===
+| 不再支持实例类型 | 建议的实例类型 
+
+
+| c3.2 个大型 | m4.xlarge 
+
+
+| c4.2xlarge | m4.2 倍大 
+
+
+| M3 x 大型 | m4.xlarge 
+
+
+| m3.2 倍大 | m4.2 倍大 
+
+
+| r3.xlarge | m4.2 倍大 
+
+
+| r3.2 个大型 | r4.2 个大型 
+|===
+
+TIP: 数据分层和增强的性能不支持 M3 和 R3 实例类型，因此，迁移到 M4 和 r4 实例类型可以让您充分利用这些 Cloud Volumes ONTAP 功能。
+
+
+
+== 升级说明
+
+* Cloud Volumes ONTAP 升级必须从 Cloud Manager 完成。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
+* 您可以从 9.3 版升级到 Cloud Volumes ONTAP 9.4 。
++
+要了解版本要求，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html["ONTAP 9 文档：集群更新要求"^]。
+
+* 升级单节点系统会使系统脱机长达 25 分钟，在此期间 I/O 会中断。
+* 升级 HA 对无中断， I/O 不会中断。在此无中断升级过程中，每个节点会同时进行升级，以继续为客户端提供 I/O 。
+

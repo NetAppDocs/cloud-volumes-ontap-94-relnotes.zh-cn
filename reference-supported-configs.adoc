@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: reference-supported-configs.html 
+keywords: ec2, instance, type, vm, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations 
+summary: Cloud Volumes ONTAP 在 AWS 和 Azure 中提供多种配置。 
+---
+= 支持的配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP 在 AWS 和 Azure 中提供两种定价选项：按需购买、自带许可证（ BYOL ）。对于按需购买，您可以选择三种配置： Explore ， Standard 或 Premium 。
+
+
+
+== 适用于 AWS 的 Cloud Volumes ONTAP
+
+在 AWS 中，您可以将 Cloud Volumes ONTAP 部署为单个系统或 HA 对。
+
+[cols="h,d,d,d,d"]
+|===
+|  | 探索 | 标准 | 高级版 | BYOL 
+
+
+| EC2 实例类型 | m4.xlarge  a| 
+* m4.2 倍大
+* r4.xlarge
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge
+* m4.4xlarge
+* r4.2 个大型
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge
+* m4.xlarge
+* m4.2 倍大
+* m4.4xlarge
+* r4.xlarge
+* r4.2 个大型
+
+
+
+
+| 底层存储 4+| 通用 SSD ，已配置的 IOPS SSD ，吞吐量优化的 HDD 和冷 HDD ，每个磁盘最多 16 TiB 
+
+
+| 最大系统容量（磁盘 + 对象存储） | 2 TiB | 10 TiB | 368 TiB | 每个许可证 368 TiB 
+|===
+注释：
+
+. 如果启用数据分层、系统的容量限制将保持不变。容量限制包括磁盘和对象存储。
+. Cloud Volumes ONTAP 标准版，高级版和 BYOL 支持数据分层。
+. 选择 EC2 实例类型时，您可以指定它是共享实例还是专用实例。
+. 在将 EBS SSD 与 Cloud Volumes ONTAP 标准版，高级版和 BYOL 结合使用时，支持更高的写入性能。
+. 有关 AWS 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
+
+
+
+
+== 适用于 Azure 的 Cloud Volumes ONTAP
+
+在 Azure 中，您可以将 Cloud Volumes ONTAP 部署为单节点系统。
+
+[cols="h,d,d,d,d"]
+|===
+|  | 探索 | 标准 | 高级版 | BYOL 
+
+
+| 虚拟机类型 | DS3_v2  a| 
+* DS4_v2
+* DS13_v2
+
+ a| 
+* DS5_v2
+* DS14_v2
+
+ a| 
+* DS3_v2
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+
+
+
+
+| 底层存储 4+| 标准 HDD 受管磁盘，标准 SSD 受管磁盘和高级 SSD 受管磁盘，每个磁盘最多 32 TiB 
+
+
+| 最大系统容量（磁盘 + 对象存储） | 2 TiB | 10 TiB | 368 TiB | 每个许可证 368 TiB 
+|===
+注释：
+
+. 如果启用数据分层、系统的容量限制将保持不变。容量限制包括磁盘和对象存储。
+. DS3_v2 虚拟机类型不支持数据分层。
+. 使用 Azure 高级存储磁盘时会启用增强的写入性能，但在使用 DS3_v2 虚拟机类型时不会启用。
+. 有关 Azure 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
+
