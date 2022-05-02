@@ -6,6 +6,7 @@ summary: 新版本的 Cloud Volumes ONTAP 引入了新功能，增强功能和�
 ---
 = Cloud Volumes ONTAP 9.4 中的新增功能
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
