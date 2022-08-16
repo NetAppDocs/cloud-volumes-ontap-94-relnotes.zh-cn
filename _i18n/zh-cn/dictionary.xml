@@ -168,9 +168,7 @@
   <block id="794df3791a8c800841516007427a2aa3" category="cell">许可证</block>
   <block id="643a529396d04bbbe61c8daa70456163" category="cell">最大系统容量（磁盘 + 对象存储）</block>
   <block id="768560d8110ed230b7fde848941af107" category="cell">2 TiB （ Explore 不支持数据分层）</block>
-  <block id="2f9882645b2c32820ad085240bacb763" category="section-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
   <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。</block>
-  <block id="fc9a388cd18c69244f22554de6f0d544" category="section-title">对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？</block>
   <block id="8644b747d80d3144a35c2f7a3eb37c2e" category="paragraph">不可以。AWS HA 对中的数据会在节点之间同步镜像，以便在发生故障时可以使用这些数据。例如，如果您在节点 A 上购买了 8 TiB 磁盘，则 Cloud Manager 还会在节点 B 上分配一个 8 TiB 磁盘，用于镜像数据。虽然配置了 16 TiB 的容量，但许可证限制仅会计入 8 TiB 的容量。</block>
   <block id="ebe518a26c9dc6650c5bca58faf1f194" category="section-title">AWS 中 Cloud Volumes ONTAP 的聚合和磁盘限制</block>
   <block id="52f3db77c94f0a37314073296154912f" category="paragraph">在 Cloud Volumes ONTAP 9.4 中，所有 EC2 实例类型均可通过单独使用 EBS 存储或使用 EBS 存储并分层到 S3 （单节点和 HA ）来达到 368 TiB 容量限制。</block>
@@ -223,9 +221,7 @@
   <block id="bb49543449782c0f1b87b3ef8f49a6be" category="cell">* 仅磁盘 *</block>
   <block id="e3185eb0708df4883935910ebf26f8db" category="cell">* 磁盘 + 数据分层 *</block>
   <block id="caa04f6c0c961ead7ba1a22b65f58bb8" category="cell">480 TiB</block>
-  <block id="cfd3d7471481ba0d3a23470409857d68" category="cell">992 TiB</block>
   <block id="f94f9afeacfc431720c782db2e1d8809" category="cell">每个许可证 368 TiB x</block>
-  <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 个 PIB</block>
   <block id="41a0b1e6c6d31716c7d7b603ce6a4936" category="section-title">逻辑存储限制</block>
   <block id="609158be2075d0d9724b333b2cf217be" category="cell">逻辑存储</block>
   <block id="73a985be794327e4a037c64d0184774a" category="cell">* 存储虚拟机（ SVM ） *</block>
@@ -280,7 +276,6 @@
   <block id="398d7dd4fa02e30dc6322ad98eff7d2b" category="paragraph">您可以在中找到 ONTAP 软件的已知问题<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="7d9b2b78909e33445be41b4ae9f344ee" category="summary">本发行说明介绍了 Cloud Volumes ONTAP 9.4 的新增功能，限制和已知问题。</block>
   <block id="a7c547126254140f4fce2f237d58af44" category="doc">Cloud Volumes ONTAP 9.4 发行说明</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
   <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">发行说明主页</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
@@ -293,4 +288,5 @@
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP 云</block>
   <block id="62703524dbb4d20326585184b2149d4d" category="admonition">最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见<block ref="b168941a5dc7eab411ef9dc2c7a220db" category="inline-link-rx"></block> 了解详细信息。</block>
+  <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
 </blocks>
