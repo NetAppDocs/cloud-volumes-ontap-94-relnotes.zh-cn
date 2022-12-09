@@ -22,7 +22,7 @@ Cloud Volumes ONTAP 具有存储配置限制，可提供可靠的操作。为获
 
 Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。NetApp 不支持超过此限制。
 
-在 Azure 中，磁盘限制可防止您单独使用磁盘来达到 368 TiB 容量限制。在这些情况下，您可以通过达到 368 TiB 容量限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。请参见  and disk limits by Azure VM size,容量和磁盘限制，按 Azure 虚拟机大小计算 有关详细信息：
+在 Azure 中，磁盘限制可防止您单独使用磁盘来达到 368 TiB 容量限制。在这些情况下，您可以通过达到 368 TiB 容量限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。请参见 <<容量和磁盘限制，按 Azure 虚拟机大小计算,容量和磁盘限制，按 Azure 虚拟机大小计算>> 有关详细信息：
 
 [cols="30,70"]
 |===
@@ -40,8 +40,10 @@ Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系
 
 | BYOL | 每个许可证 368 TiB 
 |===
+.对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？
 容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。
 
+.对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？
 不可以。AWS HA 对中的数据会在节点之间同步镜像，以便在发生故障时可以使用这些数据。例如，如果您在节点 A 上购买了 8 TiB 磁盘，则 Cloud Manager 还会在节点 B 上分配一个 8 TiB 磁盘，用于镜像数据。虽然配置了 16 TiB 的容量，但许可证限制仅会计入 8 TiB 的容量。
 
 
@@ -101,7 +103,7 @@ Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系
 | 最大磁盘大小 | 32 TiB 
 
 
-| 所有聚合中的最大数据磁盘数 ^3^ | 取决于虚拟机大小。  and disk limits by Azure VM size,请参见下文。 
+| 所有聚合中的最大数据磁盘数 ^3^ | 取决于虚拟机大小。 <<容量和磁盘限制，按 Azure 虚拟机大小计算,请参见下文>>。 
 
 
 | * RAID 组 * | 每个聚合的上限 | 1. 

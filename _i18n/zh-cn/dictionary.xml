@@ -113,10 +113,6 @@
   <block id="602b56cc8e56a5daf341c7f6b5489c76" category="list-text">启用了 Cloud Volumes ONTAP 加密的系统不支持 LUN 移动。</block>
   <block id="ad36e2b4d23122ce393299ac3f5e4d18" category="list-text">即使对于无法创建的聚合， Cloud Volumes ONTAP 也会向密钥管理器发送加密密钥。</block>
   <block id="e6cd7708d37be14be1ec14b31818d9c9" category="paragraph">您必须手动从密钥管理器中删除密钥。</block>
-  <block id="2d03060cc88d48d8c65d3a01864614ad" category="section-title">Microsoft Azure 中的已知限制</block>
-  <block id="d0e7588890233fc627c7bcaab1e75386" category="paragraph">以下已知限制会影响 Azure 中的 Cloud Volumes ONTAP 。</block>
-  <block id="e4f5b6f59db7bfa0e08c02262ddbd654" category="section-title">按需购买不适用于 CSP 合作伙伴</block>
-  <block id="f2ff5834d93c258f0fc4ad6cf6a17942" category="paragraph">如果您是 Microsoft Cloud 解决方案 Provider （ CSP ）合作伙伴，则无法部署 Cloud Volumes ONTAP Explore ，标准版或高级版，因为 CSP 合作伙伴不支持按需购买订阅。您必须购买许可证并部署 Cloud Volumes ONTAP BYOL 。</block>
   <block id="4cab73a24f20e30e14e8ec52694aef82" category="summary">新版本的 Cloud Volumes ONTAP 引入了新功能，增强功能和错误修复。</block>
   <block id="51725349a7337e60469d7cccc2aa4017" category="doc">Cloud Volumes ONTAP 9.4 中的新增功能</block>
   <block id="bc6fd8b4572c0d9cd26584917775df84" category="paragraph">Cloud Volumes ONTAP 9.4 包括多项新功能和增强功能。</block>
@@ -290,4 +286,6 @@
   <block id="62703524dbb4d20326585184b2149d4d" category="admonition">最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见<block ref="b168941a5dc7eab411ef9dc2c7a220db" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
+  <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
+  <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？</block>
 </blocks>

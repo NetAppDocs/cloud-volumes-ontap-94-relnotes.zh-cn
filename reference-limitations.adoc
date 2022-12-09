@@ -126,15 +126,3 @@ Cloud Volumes ONTAP 不会在空闲时释放 CPU ，因此 Amazon CloudWatch 可
 您必须手动从密钥管理器中删除密钥。
 
 
-
-
-
-== Microsoft Azure 中的已知限制
-
-以下已知限制会影响 Azure 中的 Cloud Volumes ONTAP 。
-
-
-
-=== 按需购买不适用于 CSP 合作伙伴
-
-如果您是 Microsoft Cloud 解决方案 Provider （ CSP ）合作伙伴，则无法部署 Cloud Volumes ONTAP Explore ，标准版或高级版，因为 CSP 合作伙伴不支持按需购买订阅。您必须购买许可证并部署 Cloud Volumes ONTAP BYOL 。
