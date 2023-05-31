@@ -125,7 +125,6 @@
   <block id="d79a3dfd452a27cb0c6ad9842942655a" category="paragraph">对于 Cloud Volumes ONTAP 9.4 高级版和 BYOL ，您现在有第三个选择：您可以使用 _auto_tiering 策略将读写卷中的冷数据块分层到容量层。冷数据不仅包括 Snapshot 副本、还包括来自活动文件系统的冷用户数据。</block>
   <block id="cd092c954573d47ecd37b6e5d96c0c03" category="paragraph">如果通过随机读取进行读取、则容量层中的冷数据块会变得很热并移动到性能层。如果按顺序读取（例如与索引和防病毒扫描关联的读取）进行读取、冷数据块将保持冷态并且不会移动到性能层。</block>
   <block id="b3a853d57fdef5749cc6f40650ebaac6" category="inline-link">Cloud Manager 文档</block>
-  <block id="6ceaaf7fac040dc75bf48fc6caccc8a6" category="paragraph">在 Cloud Manager 中创建或编辑卷时，您可以选择分层策略。有关详细信息，请参见<block ref="264e5f790f4e4561900fb0ba416bb537" category="inline-link-rx"></block>。</block>
   <block id="fc4ac16b85d775e7fb2b115e9433ac1c" category="section-title">Microsoft Azure 中的数据分层</block>
   <block id="5cb28c8ee8d4e8e76b6d9d79a4b1669f" category="paragraph">现在，您可以通过将热数据的性能层（高级或标准受管磁盘）与冷数据的容量层（ Azure Blob 存储）相结合来降低 Azure 存储成本。Azure 也支持 AWS 中支持的相同分层策略：自动，仅 Snapshot 和备份。</block>
   <block id="ad53146232e9199d7c72c376fd874df4" category="section-title">使用配置的 IOPS SSD 进行数据分层</block>
@@ -160,7 +159,6 @@
   <block id="7de15f2416b1b598e771303381d1179e" category="paragraph">Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。NetApp 不支持超过此限制。</block>
   <block id="ba23388576c937a1743b84554bd13c72" category="inline-link">将非活动数据分层到对象存储</block>
   <block id="68044ff775bca3f2082575f699cbc902" category="inline-xref">容量和磁盘限制，按 Azure 虚拟机大小计算</block>
-  <block id="c994e6c52f939ebf1482f0a7bead9479" category="paragraph">在 Azure 中，磁盘限制可防止您单独使用磁盘来达到 368 TiB 容量限制。在这些情况下，您可以通过达到 368 TiB 容量限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。请参见 <block ref="3e9c678258f956964e9e70e5427a6e55" category="inline-xref-macro-rx"></block> 有关详细信息：</block>
   <block id="794df3791a8c800841516007427a2aa3" category="cell">许可证</block>
   <block id="643a529396d04bbbe61c8daa70456163" category="cell">最大系统容量（磁盘 + 对象存储）</block>
   <block id="768560d8110ed230b7fde848941af107" category="cell">2 TiB （ Explore 不支持数据分层）</block>
@@ -283,9 +281,11 @@
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP 云</block>
-  <block id="62703524dbb4d20326585184b2149d4d" category="admonition">最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见<block ref="b168941a5dc7eab411ef9dc2c7a220db" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？</block>
+  <block id="46db5b29a56ccaf5d1f79e4bbe4aae89" category="paragraph">在 Azure 中，磁盘限制可防止您单独使用磁盘来达到 368 TiB 容量限制。在这些情况下，您可以通过达到 368 TiB 容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。请参见 <block ref="3e9c678258f956964e9e70e5427a6e55" category="inline-xref-macro-rx"></block> 有关详细信息：</block>
+  <block id="6d43452380cd21cb4417b9a1824c3ac4" category="admonition">最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见<block ref="ae983c0a7ee8a786f01e9cc8530d422b" category="inline-link-rx"></block> 了解详细信息。</block>
+  <block id="952b4eed8b943005d4741823b952e0f8" category="paragraph">在 Cloud Manager 中创建或编辑卷时，您可以选择分层策略。有关详细信息，请参见<block ref="21af1e2086b593ece92c4b9786979343" category="inline-link-rx"></block>。</block>
+  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文档</block>
 </blocks>

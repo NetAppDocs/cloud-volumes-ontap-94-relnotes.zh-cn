@@ -17,7 +17,7 @@ summary: 新版本的 Cloud Volumes ONTAP 引入了新功能，增强功能和�
 Cloud Volumes ONTAP 9.4 包括多项新功能和增强功能。
 
 
-NOTE: 最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager 发行说明"^] 了解详细信息。
+NOTE: 最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Manager 发行说明"^] 了解详细信息。
 
 
 
@@ -37,7 +37,7 @@ NOTE: 最新版本的 Cloud Manager 还引入了其他功能和增强功能。�
 
 如果通过随机读取进行读取、则容量层中的冷数据块会变得很热并移动到性能层。如果按顺序读取（例如与索引和防病毒扫描关联的读取）进行读取、冷数据块将保持冷态并且不会移动到性能层。
 
-在 Cloud Manager 中创建或编辑卷时，您可以选择分层策略。有关详细信息，请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Cloud Manager 文档"]。
+在 Cloud Manager 中创建或编辑卷时，您可以选择分层策略。有关详细信息，请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["Cloud Manager 文档"]。
 
 
 
@@ -48,7 +48,7 @@ NOTE: 最新版本的 Cloud Manager 还引入了其他功能和增强功能。�
 
 NOTE: DS3_v2 虚拟机类型不支持数据分层。
 
-在 Cloud Manager 中创建或编辑卷时，您可以选择分层策略。有关详细信息，请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Cloud Manager 文档"]。
+在 Cloud Manager 中创建或编辑卷时，您可以选择分层策略。有关详细信息，请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["Cloud Manager 文档"]。
 
 
 
