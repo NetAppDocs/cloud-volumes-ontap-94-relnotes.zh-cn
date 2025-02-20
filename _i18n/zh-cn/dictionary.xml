@@ -265,8 +265,6 @@
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link">《 ONTAP 发行说明》</block>
   <block id="398d7dd4fa02e30dc6322ad98eff7d2b" category="paragraph">您可以在中找到 ONTAP 软件的已知问题<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="7d9b2b78909e33445be41b4ae9f344ee" category="summary">本发行说明介绍了 Cloud Volumes ONTAP 9.4 的新增功能，限制和已知问题。</block>
-  <block id="a7c547126254140f4fce2f237d58af44" category="doc">Cloud Volumes ONTAP 9.4 发行说明</block>
-  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">发行说明主页</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
   <block id="e19968c5ebc4b94a271992f4b0563be8" category="sidebar">配置和限制</block>
@@ -275,15 +273,12 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 博客</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
-  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP 云</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？</block>
   <block id="46db5b29a56ccaf5d1f79e4bbe4aae89" category="paragraph">在 Azure 中，磁盘限制可防止您单独使用磁盘来达到 368 TiB 容量限制。在这些情况下，您可以通过达到 368 TiB 容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。请参见 <block ref="3e9c678258f956964e9e70e5427a6e55" category="inline-xref-macro-rx"></block> 有关详细信息：</block>
   <block id="6d43452380cd21cb4417b9a1824c3ac4" category="admonition">最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见<block ref="ae983c0a7ee8a786f01e9cc8530d422b" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="952b4eed8b943005d4741823b952e0f8" category="paragraph">在 Cloud Manager 中创建或编辑卷时，您可以选择分层策略。有关详细信息，请参见<block ref="21af1e2086b593ece92c4b9786979343" category="inline-link-rx"></block>。</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文档</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -292,4 +287,5 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="a61a85744fee28d1b209cdce2108ab2b" category="sidebar">Cloud Volumes ONTAP 9.4发行说明</block>
 </blocks>
