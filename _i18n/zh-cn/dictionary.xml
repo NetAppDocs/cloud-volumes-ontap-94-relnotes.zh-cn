@@ -31,7 +31,6 @@
   <block id="9de28fbf6817cd511eb799f9575b611d" category="list-text">选择 EC2 实例类型时，您可以指定它是共享实例还是专用实例。</block>
   <block id="9904b0ede3a9bd5892bd94e6884380ae" category="list-text">在将 EBS SSD 与 Cloud Volumes ONTAP 标准版，高级版和 BYOL 结合使用时，支持更高的写入性能。</block>
   <block id="a3f8304ab1695053d71855c60f8abf63" category="inline-link">Cloud Volumes 全球地区</block>
-  <block id="4375839c669e051e5f2a8de11ba0c5d0" category="list-text">有关 AWS 区域支持，请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="2544021bbaa4bc6eadfddbb17edf7811" category="section-title">适用于 Azure 的 Cloud Volumes ONTAP</block>
   <block id="0880fd0b2e173edf438b6f7e4d92af32" category="paragraph">在 Azure 中，您可以将 Cloud Volumes ONTAP 部署为单节点系统。</block>
   <block id="5fbb3d7412f89cff55389171f83d7684" category="cell">虚拟机类型</block>
@@ -43,7 +42,6 @@
   <block id="50bb513ae39b44421d182e4072a83998" category="cell">标准 HDD 受管磁盘，标准 SSD 受管磁盘和高级 SSD 受管磁盘，每个磁盘最多 32 TiB</block>
   <block id="d448e5e37b82dc9cd3ec041340cd7253" category="list-text">DS3_v2 虚拟机类型不支持数据分层。</block>
   <block id="d6b23a41a85f490ae75b43cb4095d8c0" category="list-text">使用 Azure 高级存储磁盘时会启用增强的写入性能，但在使用 DS3_v2 虚拟机类型时不会启用。</block>
-  <block id="7c7627c6477255acb2239bd1be90f346" category="list-text">有关 Azure 区域支持，请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
@@ -288,4 +286,6 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="a61a85744fee28d1b209cdce2108ab2b" category="sidebar">Cloud Volumes ONTAP 9.4发行说明</block>
+  <block id="0890aa708cef7529c2bd35cb7d2895df" category="list-text">有关AWS区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
+  <block id="f0de068c81c765820aca0fa8fe017396" category="list-text">有关Azure区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
 </blocks>
